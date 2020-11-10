@@ -10,7 +10,7 @@ const CommitItem = ({ commit }) => {
   const msgLong = commitMsg.length > 75;
 
   return (
-    <div className='card tooltip' style={{ padding: '0rem 1rem' }}>
+    <div style={{ padding: '0rem 1rem' }}>
       <span className='text-small'>
         {/* <Moment format='YYYY/MM/DD'> */}
         <Moment format='YYYY/MM/DD HH:mm'>
@@ -18,12 +18,12 @@ const CommitItem = ({ commit }) => {
         </Moment>{' '}
       </span>
       <a href={tree_url}>
-        <span className='m-1'>
+        <span className='m-1' style={{ fontSize: '.85rem' }}>
           {shortMsg}
           {msgLong && ' [...]'}
         </span>
-        {msgLong && <span className='tooltiptext'></span>}
       </a>
+      <hr />
     </div>
   );
 };

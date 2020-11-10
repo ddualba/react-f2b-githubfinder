@@ -7,13 +7,14 @@ const RepoItem = ({ repo, match }) => {
   let { login } = useParams();
 
   return (
-    <div className='card' style={{ padding: '0rem 1rem' }}>
-      <Link to={`/repos/${login}/${repo.name}`} className='badge badge-light'>
-        Commit List
+    <div>
+      <Link to={`/repos/${login}/${repo.name}`} className='btn-white'>
+        <span style={{ fontSize: '.75rem', padding: '.5rem' }}> Commits </span>
       </Link>
-      <span>
+      <span className='m-1'>
         <a href={repo.html_url}>{repo.name}</a>
       </span>
+      <hr />
     </div>
   );
 };

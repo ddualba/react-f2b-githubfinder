@@ -29,9 +29,11 @@ const Commits = ({ match }) => {
       <Link to='/' className='btn btn-light'>
         Back To Search
       </Link>
-      <h1>List of Latest Commits: {`${commits.length} total (100 max)`}</h1>
-      <h3>User Name: {login}</h3>
       <h3>Repo Name: {reponame}</h3>
+
+      <p>Last {`(${commits.length})`} Commits: (100 max) </p>
+
+      {/* <h3>User Name: {login}</h3> */}
 
       {commits.map(commit => (
         <CommitItem commit={commit} key={commit.id} />
