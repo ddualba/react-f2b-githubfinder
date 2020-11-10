@@ -60,6 +60,9 @@ img {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
+.text-small {
+  font-size: 0.75rem;
+}
 
 .lead {
   font-size: 1.5rem;

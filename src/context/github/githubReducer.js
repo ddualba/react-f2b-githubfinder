@@ -3,7 +3,8 @@ import {
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
-  GET_REPOS
+  GET_REPOS,
+  GET_COMMITS
 } from '../types';
 
 export default (state, action) => {
@@ -24,12 +25,21 @@ export default (state, action) => {
       return {
         ...state,
         users: [],
+        user: {},
+        repos: [],
+        commits: [],
         loading: false
       };
     case GET_REPOS:
       return {
         ...state,
         repos: action.payload,
+        loading: false
+      };
+    case GET_COMMITS:
+      return {
+        ...state,
+        commits: action.payload,
         loading: false
       };
     case SET_LOADING:
